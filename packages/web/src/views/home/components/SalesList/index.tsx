@@ -98,6 +98,21 @@ export const SalesListView = () => {
                 )}
               </Tabs>
             </Row>
+            <Row>
+              <div className="artwork-grid">
+                {isLoading &&
+                  [...Array(10)].map((_, idx) => <CardLoader key={idx} />)}
+                {!isLoading &&
+                  auctions.map(auction => (
+                    <Link
+                      key={auction.auction.pubkey}
+                      to={`/auction/${auction.auction.pubkey}`}
+                    >
+                      <AuctionRenderCard auctionView={auction} />
+                    </Link>
+                  ))}
+              </div>
+            </Row>
           </Col>
         </Content>
       </Layout>

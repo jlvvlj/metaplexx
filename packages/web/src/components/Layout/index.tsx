@@ -28,7 +28,7 @@ export const AppLayout = React.memo((props: any) => {
             {props.children}
           </Content>
         </Layout>
-        <div className="grid grid-cols-3 gap-5 bg-black p-6">
+      {/*   <div className="grid grid-cols-3 gap-5 bg-black p-6">
           <div className="flex flex-col justify-start items-start">
             <div className="w-full h-80">
               <img
@@ -60,7 +60,7 @@ export const AppLayout = React.memo((props: any) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/*<Footer />*/}
       </Layout>
     </>
